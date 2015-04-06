@@ -13,10 +13,10 @@
     <title>Clean Blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/clean-blog.min.css" rel="stylesheet">
+    <link href="/assets/css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -112,13 +112,13 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
+    <script src="/assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="assets/js/clean-blog.min.js"></script>
+    <script src="/assets/js/clean-blog.min.js"></script>
 
 </body>
 

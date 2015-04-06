@@ -16,18 +16,30 @@ class HomeController extends BaseController {
 	*/
 
 	public function index(){
-		return View::make('main')->with('page','index');
+		$getBlogs=Blogs::where('status','1')->orderBy('id','DESC')->paginate('10');
+		return View::make('main')->with('page','index')->with('getBlogs',$getBlogs);;
 	}
 	public function about(){
-			return View::make('main')->with('page','about');
+			$getAbout=Aboutus::all();
+			return View::make('main')->with('page','about')->with('getAbout',$getAbout);;
 	}
 	
-	public function post(){
-			return View::make('main')->with('page','post');
+	public function post($id=null){
+			$getSliderImage	=	PostSlider::where('status','1')->first();
+			if($id){
+				$getBlogById = Blogs::find($id);
+				return View::make('main')->with('page','post')
+												 ->with('getSliderImage',$getSliderImage)
+												 ->with('getBlogById',$getBlogById);
+			}
+			else{
+					return View::make('main')->with('page','post')->with('getSliderImage',$getSliderImage);
+				}
 	}
 	
 	public function contact(){
-			return View::make('main')->with('page','contact');
+			$getContectSlide =	ContectSlide::where('status','1')->first();
+			return View::make('main')->with('page','contact')->with('getContectSlide',$getContectSlide);;
 	}
 
 }
