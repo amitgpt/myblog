@@ -16,3 +16,31 @@ Route::get('about','HomeController@about');
 Route::get('post/{id?}','HomeController@post');
 Route::get('contact','HomeController@contact');
 Route::post('/contact/message','HomeController@messageSave');
+
+Route::get('admin','AuthController@loginView');
+Route::get('login','AuthController@loginView');
+
+/* Auth */
+Route::group(array('prefix' => 'auth'),function(){
+	Route::post('login','AuthController@login');
+});
+
+/* Admin Dashboard View*/
+Route::group(array('prefix' => 'admin','before'=>'auth'),function(){
+	
+		Route::get('dashboard','AdminController@adminDashboardView');
+		Route::get('about','AdminController@aboutView');
+		Route::post('updateabout','AdminController@updateabout');
+		Route::get('contact','AdminController@contactView');
+		Route::post('contact/addupdate','AdminController@addUpdateContact');
+		Route::get('contact/message','AdminController@messageView');
+		Route::get('samplepost','AdminController@samplePostView');
+	});
+
+
+/* Logout */
+Route::get('logout',function(){
+	Auth::logout();
+	return Redirect::to('/');
+	
+	});
