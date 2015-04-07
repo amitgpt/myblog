@@ -15,3 +15,4 @@ Route::get('/','HomeController@index');
 Route::get('about','HomeController@about');
 Route::get('post/{id?}','HomeController@post');
 Route::get('contact','HomeController@contact');
+Route::post('/contact/message','HomeController@messageSave');

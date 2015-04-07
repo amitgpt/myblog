@@ -7660,6 +7660,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 		dataTypes.shift();
 		if ( ct === undefined ) {
 			ct = s.mimeType || jqXHR.getResponseHeader("Content-Type");
+		
 		}
 	}
 
@@ -7871,7 +7872,7 @@ jQuery.extend({
 			context: true
 		}
 	},
-
+	
 	// Creates a full fledged settings object into target
 	// with both ajaxSettings and settings fields.
 	// If target is omitted, writes into ajaxSettings.
@@ -8069,6 +8070,7 @@ jQuery.extend({
 			// If data is available, append data to url
 			if ( s.data ) {
 				cacheURL = ( s.url += ( rquery.test( cacheURL ) ? "&" : "?" ) + s.data );
+				
 				// #9682: remove data so that it's not used in an eventual retry
 				delete s.data;
 			}
@@ -8076,7 +8078,7 @@ jQuery.extend({
 			// Add anti-cache in url if needed
 			if ( s.cache === false ) {
 				s.url = rts.test( cacheURL ) ?
-
+				
 					// If there is already a '_' parameter, set its value
 					cacheURL.replace( rts, "$1_=" + nonce++ ) :
 
@@ -8125,6 +8127,7 @@ jQuery.extend({
 		// Install callbacks on deferreds
 		for ( i in { success: 1, error: 1, complete: 1 } ) {
 			jqXHR[ i ]( s[ i ] );
+			
 		}
 
 		// Get transport

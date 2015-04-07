@@ -14,6 +14,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="/assets/css/clean-blog.min.css" rel="stylesheet">
@@ -22,6 +23,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+     <script src="/assets/js/jquery-1.8.3.min.js"></script>
+     <script src="/assets/js/jquery.validate.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -112,13 +115,15 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="/assets/js/jquery.js"></script>
+    <!--script src="/assets/js/jquery.js"></script-->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <!--script src="/assets/js/bootstrap.min.js"></script--> 
+    <script src="/assets/js/custom-contact.js"></script>
+    
 
     <!-- Custom Theme JavaScript -->
-    <script src="/assets/js/clean-blog.min.js"></script>
+    <!--script src="/assets/js/clean-blog.min.js"></script-->
 
 </body>
 

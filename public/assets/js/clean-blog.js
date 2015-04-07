@@ -12,6 +12,7 @@ $(function() {
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
+            
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
@@ -25,8 +26,8 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            $.ajax({
-                url: "././mail/contact_me.php",
+            $.ajax({				
+                url: "contact/message",
                 type: "POST",
                 data: {
                     name: name,
@@ -35,7 +36,7 @@ $(function() {
                     message: message
                 },
                 cache: false,
-                success: function() {
+              /*  success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -58,6 +59,8 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
+                */
+                
             })
         },
         filter: function() {

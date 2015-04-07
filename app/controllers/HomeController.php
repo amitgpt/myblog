@@ -41,5 +41,36 @@ class HomeController extends BaseController {
 			$getContectSlide =	ContectSlide::where('status','1')->first();
 			return View::make('main')->with('page','contact')->with('getContectSlide',$getContectSlide);;
 	}
+	
+	/*Message Save*/
+	public function messageSave(){
+			
+		$rules = array(
+			'name' 		=> 'required|min:5',
+			'email' 	=> 'required|email',
+			'phone' 	=> 'required|numeric',
+			'message' 	=> 'required',
+			);
+				
+		$v = Validator::make( Input::all(), $rules );
+		if( $v->fails()){
+				return Redirect::back()
+						->withErrors( $v )
+						->withInput();
+		}
+		
+		$table = new ContactMessage();
+		
+		$table->name 			=	Input::get('name');
+		$table->email 			=	Input::get('email');
+		$table->phone_number		=	Input::get('phone');
+		$table->message 		=	Input::get('message');
+		if($table->save()){
+			 Session::flash('conformetion', 'Successfully send your message.');
+			return Redirect::back();
+		}
+		
+	
+	}
 
 }
